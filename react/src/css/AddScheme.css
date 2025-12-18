@@ -1,0 +1,64 @@
+/* AddSchemes Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+}
+
+h1.h2 {
+  color: #1e3c72;
+  font-weight: 600;
+}
+
+/* Form Styling */
+.form-control, .form-select, textarea.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus, textarea.form-control:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.3);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Button Styling */
+.btn-submit {
+  background-color: #1e3c72;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #163154;
+}
+
+/* Form Container Styling */
+.bd-example {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.d-flex.justify-content-between {
+  margin-bottom: 20px;
+}
+
+.h2.text-dark-blue {
+  color: #1e3c72;
+}

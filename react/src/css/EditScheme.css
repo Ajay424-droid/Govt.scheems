@@ -1,0 +1,66 @@
+.edit-scheme-container {
+  padding: 30px 15px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.edit-scheme-card {
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.edit-scheme-card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #343a40;
+}
+
+.edit-scheme-card .form-label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.edit-scheme-card .form-control,
+.edit-scheme-card .form-select,
+.edit-scheme-card textarea {
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.edit-scheme-card .btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.edit-scheme-card .alert {
+  margin-bottom: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .edit-scheme-card {
+    padding: 20px;
+  }
+
+  .edit-scheme-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .edit-scheme-card .d-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .edit-scheme-card .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,89 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+  min-height: 400px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../assets/poster/banner1.jpg') center/cover no-repeat;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 700px;
+  width: 100%;
+}
+
+.hero-content h1,
+.hero-content h3 {
+  color: #000;
+}
+
+/* Devices under 992px (tablets and below) */
+@media (max-width: 992px) {
+  .hero {
+    height: 50vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Devices under 576px (mobiles) */
+@media (max-width: 576px) {
+  .hero {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Optional decorative elements (you can remove if not used) */
+.product-device,
+.product-device-2 {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+
+.product-device {
+  top: -50px;
+  right: 10%;
+}
+
+.product-device-2 {
+  bottom: -50px;
+  left: 10%;
+}

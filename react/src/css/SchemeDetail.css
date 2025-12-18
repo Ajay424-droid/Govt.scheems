@@ -1,0 +1,168 @@
+.scheme-detail-container {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.scheme-back-btn {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.scheme-back-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.3);
+}
+
+.scheme-detail-card,
+.eligibility-section {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.scheme-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-icon {
+  font-size: 1.8rem;
+}
+
+.scheme-header h1 {
+  font-size: 1.5rem;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.status-badge {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.status-badge.closed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.scheme-body {
+  padding: 2rem 1.5rem;
+}
+
+.info-grid,
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item,
+.eligibility-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover,
+.eligibility-item:hover {
+  transform: translateY(-3px);
+}
+
+.info-icon,
+.eligibility-icon {
+  font-size: 1.4rem;
+  color: #1e3c72;
+  margin-top: 0.3rem;
+}
+
+.info-content h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.info-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #333;
+  word-break: break-word;
+}
+
+.portal-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #1e3c72;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.portal-link:hover {
+  color: #2a5298;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .scheme-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status-badge {
+    align-self: flex-start;
+  }
+
+  .info-grid, .eligibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scheme-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .scheme-back-btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
