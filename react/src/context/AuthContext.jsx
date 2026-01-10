@@ -9,8 +9,13 @@ export const AuthProvider = ({ children }) => {
     // Check for user info in localStorage
     const storedUser = localStorage.getItem('user');
     if (storedUser) {
-      console.log('Stored User:', JSON.parse(storedUser));  // Log the stored user
-      setUser(JSON.parse(storedUser));
+      try {
+        console.log('Stored User:', JSON.parse(storedUser));
+        setUser(JSON.parse(storedUser));
+      } catch (e) {
+        console.error("Failed to parse stored user", e);
+        localStorage.removeItem('user');
+      }
     }
   }, []);
 
