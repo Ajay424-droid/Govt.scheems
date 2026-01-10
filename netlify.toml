@@ -1,7 +1,7 @@
 [build]
-  base = "react"
-  publish = "dist"
-  command = "npm run build"
+  base = "."
+  publish = "react/dist"
+  command = "cd node && npm install && cd ../react && npm install && npm run build"
 
 [functions]
   external_node_modules = ["pg"]
