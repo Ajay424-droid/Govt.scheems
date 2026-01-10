@@ -1,6 +1,6 @@
 // src/api/categoryApi.js
 import axios from 'axios';
-const CATEGORY_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/categories';
+const CATEGORY_BASE = '/api/categories';
 
 const categoryApi = {
   createCategory: async (category_id, category_name) => {

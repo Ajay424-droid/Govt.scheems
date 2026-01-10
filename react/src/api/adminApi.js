@@ -3,9 +3,7 @@ import axios from 'axios';
 // Ensure axios sends cookies on every request
 axios.defaults.withCredentials = true;
 
-const ADMIN_BASE = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api/admin`
-  : 'http://localhost:5000/api/admin';
+const ADMIN_BASE = '/api/admin';
 
 // Fetch CSRF token and set it in default headers for POST requests
 const fetchCsrf = async () => {

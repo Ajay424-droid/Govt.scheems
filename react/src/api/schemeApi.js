@@ -1,6 +1,6 @@
 // src/api/schemeApi.js
 import axios from 'axios';
-const SCHEME_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api/schemes';
+const SCHEME_BASE = '/api/schemes';
 
 const schemeApi = {
   createScheme: async (schemeData) => {
