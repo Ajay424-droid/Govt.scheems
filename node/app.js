@@ -5,9 +5,7 @@ const cookieParser = require('cookie-parser');
 const csurf = require('csurf');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config();
 
-// Import routes
 const userRoutes = require('./routes/userRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const schemeRoutes = require('./routes/schemeRoutes');
@@ -16,20 +14,20 @@ const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 
-// Security headers
+// Security
 app.use(helmet());
 
-// CORS configuration for your React frontend
+// CORS
 app.use(cors({
   origin: 'http://localhost:5173',
   credentials: true,
 }));
 
-// Parse JSON and cookies
+// Parsers
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-// CSRF protection with cookie
+// CSRF
 app.use(csurf({
   cookie: {
     httpOnly: true,
@@ -37,16 +35,14 @@ app.use(csurf({
   }
 }));
 
-// ✅ Route to get CSRF token
 app.get('/api/user/csrf-token', (req, res) => {
   res.json({ csrfToken: req.csrfToken() });
 });
 
-// Global rate limiter
+// Rate limiter
 app.use(rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
-  message: 'Too many requests from this IP, please try again later.',
 }));
 
 // Routes
@@ -63,8 +59,5 @@ app.use((err, req, res, next) => {
   }
   next(err);
 });
-
-const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 module.exports = app;
