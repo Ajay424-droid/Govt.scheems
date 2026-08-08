@@ -1,7 +1,7 @@
 # deploy project usnig jenkins and dokcer 
 
 1. Create EC2
-2. 
+   
        ↓
    
 4. Connect to EC2
