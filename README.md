@@ -54,7 +54,9 @@ sudo systemctl status jenkins
 Open Jenkins:
 
 http://EC2-PUBLIC-IP:8080
-📂 Project Structure
+
+## 🏗️ 📂 Project Structure
+
 Govt.scheems/
 │
 ├── README.md
