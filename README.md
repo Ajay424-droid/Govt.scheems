@@ -127,3 +127,17 @@ Docker Container
 Frontend / Backend Application
 
 This approach allows Jenkins to automatically build and deploy the application whenever the project is updated.
+
+
+                    GitHub
+                   /      \
+                  ↓        ↓
+          Frontend Jenkins  Backend Jenkins
+                  ↓        ↓
+             Docker Build  Docker Build
+                  ↓        ↓
+          Frontend Image   Backend Image
+                  ↓        ↓
+          Frontend Container Backend Container
+                  ↓        ↓
+                :80       :5000
